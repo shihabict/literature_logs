@@ -71,4 +71,12 @@ Previous works struggle with data **quality, scalability, interpretability, and 
       - Safety
       - Environmental impact
   - XAI shows how each sub-reward influenced the final decision.
- 
+ ## Result Analysis
+ - Evaluation Metrics
+   - Accuracy (percentage of correct predictions).
+   - Miss rate (percentage of cases where congestion was missed or misclassified).
+- Proposed RL-XAI:
+  - Training accuracy ~ 98.7–98.9%
+  - Validation accuracy ~ 98.10%
+  - Miss rate: ~ 1.2–1.9%
+![Alt text] (rl_XAI_results.png "Results")
