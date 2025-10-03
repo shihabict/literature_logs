@@ -43,3 +43,32 @@ Previous works struggle with data **quality, scalability, interpretability, and 
   - Training ML (especially RL and deep models) requires **heavy resources**.  
   - Real-time traffic systems often have **limited processing power**, making deployment difficult.  
 
+## Methodology
+
+- Step 1: Data Acquisition
+  - Collect multiple sources of data
+  - Traffic data (vehicle counts, density, traffic flow)
+  - Weather Conditions (rain, fog, snow)
+- Step 2: Data Pre-processing
+  - Clean the raw data (remove errors or missing values)
+  - Extract important features (average speed)
+  - Normalize the values (scales the data)
+- Step 3: RL Environment
+  - The RL agent observes the state (traffic density, speed, weather).
+  - It chooses actions (e.g., adjust traffic lights, recommend alternate routes, send congestion warnings).
+  - The reward comes from outcomes (reduced congestion, faster travel times).
+- Step 4: Training
+  - Training happens in a simulation environment that mimics real-world traffic.
+- Step 5: Simulation Environment
+  - The RL agent is trained in a virtual setup that mimics real-world traffic (roads, signals, events).
+  - Safer and cheaper than experimenting directly on live roads.
+- Step 6: Integration with XAI
+  - Once the RL agent is trained, XAI is applied to explain why the agent takes certain actions.
+  - Example: If the agent changes a traffic light, XAI points out the reasons (e.g., high density, long wait time, environmental impact).
+- Step 7: Sub-rewards in Decision Making
+  - The reward function isn’t just one number. It is broken down into components:
+      - Travel time
+      - Safety
+      - Environmental impact
+  - XAI shows how each sub-reward influenced the final decision.
+ 
