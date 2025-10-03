@@ -2,7 +2,7 @@
 
 **Authors**: Shan Khan, Taher M. Ghazal, Tahir Alyas, M. Waqas, Muhammad Ahsan Raza, Oualid Ali, Muhammad Adnan Khan, Sagheer Abbas  
 **Published in**: *International Journal of Advanced Computer Science and Applications (IJACSA)*, Vol. 16, No. 1, 2025  
-
+**Paper Link**: [Click here](https://thesai.org/Downloads/Volume16No1/Paper_50-Towards_Transparent_Traffic_Solutions_Reinforcement_Learning.pdf)
 ---
 
 ## 📄 Abstract Summary
@@ -72,6 +72,8 @@ Previous works struggle with data **quality, scalability, interpretability, and 
       - Environmental impact
   - XAI shows how each sub-reward influenced the final decision.
  ## Result Analysis
+
+ RL-XAI model reduces the average congestion by 25%
  - Evaluation Metrics
    - Accuracy (percentage of correct predictions).
    - Miss rate (percentage of cases where congestion was missed or misclassified).
