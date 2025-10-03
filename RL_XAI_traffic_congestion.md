@@ -21,7 +21,7 @@ Previous works struggle with data **quality, scalability, interpretability, and 
 
 - **Complexity of traffic system**  
   - Traffic depends on many interrelated factors (road conditions, weather, human actions).  
-  - Many ML models fail to capture all these factors → poor predictions.  
+  - Many ML models fail to capture all these factors - poor predictions.  
 
 - **Data dependency**  
   - ML models are **data-hungry**.  
