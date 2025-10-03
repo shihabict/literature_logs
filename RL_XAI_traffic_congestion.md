@@ -15,3 +15,31 @@
   - Provides **interpretable results** that build trust for real-world deployment.  
 <!-- - Demonstrates ~**5% improvement** in security, reliability, and accuracy compared to existing approaches.  -->
 - Proposed RL-XAI framework shows potential for more **intelligent and efficient traffic management systems**.  
+
+## Limitations of Previous Work
+Previous works struggle with data **quality, scalability, interpretability, and real-time feasibility**, which this paper tries to address with its RL + XAI approach.
+
+- **Complexity of traffic system**  
+  - Traffic depends on many interrelated factors (road conditions, weather, human actions).  
+  - Many ML models fail to capture all these factors → poor predictions.  
+
+- **Data dependency**  
+  - ML models are **data-hungry**.  
+  - Collecting **large, real-time traffic datasets** is difficult.  
+  - Data anomalies or biases can reduce performance.  
+
+- **Scalability issues**  
+  - Models trained for one city/location often **don’t transfer** well to others.  
+  - Hard to scale across large metropolitan areas.  
+
+- **Transparency/Interpretability**  
+  - Some techniques try to make RL interpretable (like blockchain, fusion methods).  
+  - Results are often **contradictory or unclear**, limiting trust.  
+
+- **Ethical & Regulatory challenges**  
+  - RL-based real-time decisions raise **safety, privacy, fairness, and compliance** concerns.  
+
+- **Computational cost**  
+  - Training ML (especially RL and deep models) requires **heavy resources**.  
+  - Real-time traffic systems often have **limited processing power**, making deployment difficult.  
+
