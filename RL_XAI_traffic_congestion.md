@@ -44,7 +44,7 @@ Previous works struggle with data **quality, scalability, interpretability, and 
   - Real-time traffic systems often have **limited processing power**, making deployment difficult.  
 
 ## Methodology
-
+![Alt text](rl_XAI_methodology.png "Methodology")
 - Step 1: Data Acquisition
   - Collect multiple sources of data
   - Traffic data (vehicle counts, density, traffic flow)
