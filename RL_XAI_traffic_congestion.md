@@ -73,7 +73,7 @@ Previous works struggle with data **quality, scalability, interpretability, and 
   - XAI shows how each sub-reward influenced the final decision.
  ## Result Analysis
 
- RL-XAI model reduces the average congestion by 25%
+ **RL-XAI model reduces the average congestion by 25%**
  - Evaluation Metrics
    - Accuracy (percentage of correct predictions).
    - Miss rate (percentage of cases where congestion was missed or misclassified).
