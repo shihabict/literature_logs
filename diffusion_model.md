@@ -9,7 +9,12 @@ It is a branch of AI that actually learns to predict noise. We can think of it a
    - We train a neural network (U-Net) that actually learns to predict the noise that was added in the first Phase.
    - At every time step, if the model can predict the noise accurately, we subtract that from the noisy data and move one step ahead to the clean data.
    - To generate a new image, the model starts with pure random noise and asks to denoise it repeatedly utill a high fidelity data is generated.
-  
+
+    <img src="images/diffusion-model-building.gif" width="500" height="200">
+   
+    *Figure 1 Diffusion model turning noise into a picture*
+   
+*Image by Sama Bali via [Nvidia Technical blog](https://developer-blogs.nvidia.com/wp-content/uploads/2024/07/diffusion-model-building.gif)
   ## Core Objective: "Noise Prediction"
   The goal is to learn a function that could be a neural network, which can look at a blurry image and can guess exactly what noise was added here.
   The simplified loss function : 
