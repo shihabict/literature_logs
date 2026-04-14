@@ -41,3 +41,7 @@ It is a neural network that is mainly used for image segmentation tasks. It has 
 1. **Encoder**: At the beginning, the image is divided into small parts followed by several convolution and pooling layers, resulting in  small features, shapes, etc.
 2. **Bottleneck**: The most compressed information of the image is stored here, and it connects the encoder with the decoder.
 3. **Decoder**: Decoders take the abstract information. It uses upsampling and combines information from the encoder using **Skip Connection**. These connections provide the spatial details from the encoder layers to refine the output.
+
+<img src="images/u_net-architecture.png" width="500" height="200">
+   
+    *Figure 2: U-Net Architecture*
