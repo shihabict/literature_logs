@@ -43,5 +43,5 @@ It is a neural network that is mainly used for image segmentation tasks. It has 
 3. **Decoder**: Decoders take the abstract information. It uses upsampling and combines information from the encoder using **Skip Connection**. These connections provide the spatial details from the encoder layers to refine the output.
 
 <img src="images/u_net-architecture.png" width="500" height="200">
-   
-    *Figure 2: U-Net Architecture*
+
+*Figure 2: U-Net Architecture*
