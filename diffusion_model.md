@@ -25,3 +25,8 @@ It is a branch of AI that actually learns to predict noise. We can think of it a
 3. **Learning**: If your friend predicts a huge splash but actually you added a tiny drop, the loss is high. Since your friend predicted a larger one, he set up his mind calculation in a way that he would predict a smaller drop next time. That's exactly how model update internal weights ($\theta$) so that next time the loss can be reduced.
 
 **Here, your friend is the diffusion model, milk is the noise, and coffee is the data.**
+## Why do we predict noise instead of the image?
+The simple answer is **complexity**. 
+1. **Stable training**: Predicting a clear image from pure noise is a huge task. It is something like you have a single sentence, and you are trying to write a complete novel of 700 pages. So, predicting noise instead of more manageable task for the neural network.
+2. **Gradient Stability**: The loss function for predicting noise(MSE) provides a consistent gradient, whereas predicting a complete image leads to too small or too large losses, causing instability.
+3. **Simplified Objective**: Mathematically, the training process of predicting noise is way more simplified than predicting a complete image.
