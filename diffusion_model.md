@@ -12,7 +12,7 @@ It is a branch of AI that actually learns to predict noise. We can think of it a
 
     <img src="images/diffusion-model-building.gif" width="500" height="200">
    
-    *Figure 1 Diffusion model turning noise into a picture*
+    *Figure 1: Diffusion model turning noise into a picture*
    
 *Image by Sama Bali via [Nvidia Technical blog](https://developer-blogs.nvidia.com/wp-content/uploads/2024/07/diffusion-model-building.gif)
   ## Core Objective: "Noise Prediction"
@@ -37,3 +37,7 @@ The simple answer is **complexity**.
 3. **Simplified Objective**: Mathematically, the training process of predicting noise is way more simplified than predicting a complete image.
 
 ## U-Net Architecture
+It is a neural network that is mainly used for image segmentation tasks. It has three major parts:
+1. **Encoder**: At the beginning, the image is divided into small parts followed by several convolution and pooling layers, resulting in  small features, shapes, etc.
+2. **Bottleneck**: The most compressed information of the image is stored here, and it connects the encoder with the decoder.
+3. **Decoder**: Decoders take the abstract information. It uses upsampling and combines information from the encoder using **Skip Connection**. These connections provide the spatial details from the encoder layers to refine the output.
