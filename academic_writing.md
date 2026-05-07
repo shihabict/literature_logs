@@ -56,3 +56,36 @@ a professional and serious register throughout.
 | ------------ | -------------------- |
 | We can see from the data that sales dropped. | The data demonstrate a measurable decline in sales during the third quarter. |
 | In my study, I interviewed 40 participants. | The present study involved semi-structured interviews with 40 participants. |
+
+## Structure and Citation Style
+Academic writing follows a logical and predictable architecture. The structure varies by document type (essay, research paper, thesis, and lab report), and we will discuss the research paper.
+
+### Universal Structure for a research paper
+Title & Abstract --> Introduction --> Literature Review --> Methodology --> Results --> Discussion --> Conclusion --> References.
+1. **Title&Abstract**: The title and abstract are the front door of our research. The title should be a concrete summary of the abstract, and the abstract should summarize our entire research.
+   ### What does it answer?
+   - What is this paper about?
+   - What did you do and how?
+   - What did you find?
+   - Why does it matter?
+   ### What to consider when writing a title?
+   - Title should be specific, searchable, and avoid unnecessary jargon.
+   - Include your method, problem, and context.
+   - Avoid vague titles like "A Study of reward design", rather "Comparative analysis of reward design in isolated intersection signal optimization" instead.
+   - Our title should not exceed 10-15 words.
+   ### What to consider when writing an abstract?
+   - Write it LAST, even though it appears first.
+   - Abstract is the complete summary of the entire paper, and the length should be between 150 and 200.
+   - It needs to hit four beats: the problem, specific approach, key findings, and the broader impact.
+   - Avoid undefined acronyms.
+2. **Introduction**: Introduction setup the context and the stage of our research. It should start with what the current state of the problem we are addressing is, followed by the gap in the existing work, and conclude by introducing our work as the solution. One of the conventions is to list the contribution as bullet points at the end of the introduction.
+    ### What does it answer?
+    - Why does this topic matter?
+    - What specific problem exists?
+    - Gap of existing solutions.
+    - Contributions of this paper.
+    ### What to consider when writing it?
+    - The research objective must be reflected in the introduction.
+    - Do not deep dive into related work.
+    - State the contribution explicitly.
+    - Length should be 1-2 pages for a conference paper and 2-3 pages for a journal paper.
