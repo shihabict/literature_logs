@@ -45,3 +45,5 @@ It is a neural network that is mainly used for image segmentation tasks. It has 
 <img src="images/u_net-architecture.png" width="500" height="200">
 
 *Figure 2: U-Net Architecture*
+## Variational Encoder (VAE)
+VAE is like a high-tech "translator" that translates the messy, high-dimensional data into a compact, organized "concept space."
