@@ -47,3 +47,24 @@ It is a neural network that is mainly used for image segmentation tasks. It has 
 *Figure 2: U-Net Architecture*
 ## Variational Encoder (VAE)
 VAE is like a high-tech "translator" that translates the messy, high-dimensional data into a compact, organized "concept space."
+### Fundamental Difference With Autoencoder
+An autoencoder tries to compress an image into a small vector, whereas the VAE tries to learn a probability distribution of an image instead of single vector.
+
+### Architecture of VAE
+
+### Encoder
+The encoder takes an image (a 512*512 image of a face) and passes it through convolution layers. Instead of generating a vector, it generates the mean and the variance.
+### Laten Space
+The latent space uses the $\mu$ and $\sigma$ to create a bell curve (Gaussian Distribution). This ensures that if you pick any point near the center, it will look like a valid face.
+### Decoder
+Decoder takes a random sample from the bell curve and tries to redraw the original image.
+
+### Example
+Imagine we want to teach a computer to draw houses.
+
+**Autoencoder:** It memorizes specific houses. If you ask it to draw something "halfway" between a cottage and a skyscraper, it might output a blurry mess because it doesn't understand the "space" in between.
+
+**VAE**: Encoder looks at 1,000 houses and realizes they all have "Height" and "Number of Windows." In the Latent Space, it maps "Height" to one axis and "Windows" to another. Instead of memorizing one specific house, it learns the range of what a house can be.
+
+**Result:** If you pick a point in the middle of the latent space, the Decoder can generate a house that has never existed but looks perfectly realistic because it understands the **"rules" of the distribution**.
+
