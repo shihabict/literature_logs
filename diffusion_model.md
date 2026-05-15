@@ -52,6 +52,9 @@ An autoencoder tries to compress an image into a small vector, whereas the VAE t
 
 ### Architecture of VAE
 
+<img src="images/VAE.png" width="500" height="200">
+
+_Figure 3: VAE architecture_
 ### Encoder
 The encoder takes an image (a 512*512 image of a face) and passes it through convolution layers. Instead of generating a vector, it generates the mean and the variance.
 ### Laten Space
