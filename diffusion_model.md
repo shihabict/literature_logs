@@ -71,7 +71,27 @@ Imagine we want to teach a computer to draw houses.
 
 **Result:** If you pick a point in the middle of the latent space, the Decoder can generate a house that has never existed but looks perfectly realistic because it understands the **"rules" of the distribution**.
 
+_However, AEs have a limitation: they cannot generate new data points, as their latent representations are fixed and not probabilistic._
+
 ### Where to use which one?
 **AE:** Tasks like dimensionality reduction and feature extraction.
 
 **VAE:** Tasks like image and text generation, where we need to generate new datapoints.
+### Why is diffusion fast?
+Diffusion uses VAE, which compresses a larger image (512 * 512) into a latent grid of smaller dimensions (64*64). While denosing, the diffusion model only uses the latent grid, and once denoising is done, the VAE decoder up-scales that latent grid back into a 512*512 image. That's why the diffusion model is so fast.
+
+### Math Objective
+### Role of KL Divergence in VAEs
+KL divergence acts as a regularization tool in VAEs, it makes sure that the learned latent distribution $q(z|x)$ stays close to the Normal Distribution.
+By forcing the learned latent space towards a normal distribution, the model avoids overfitting and ensures that the model exactly knows where to search for noise.
+### What Is ELBO, and Why Does It Matter?
+The Evidence Lower Bound (ELBO) is the objective function that actually balances reconstruction and regularization. The loss function for a VAE is the sum of two competing terms:
+$$\mathcal{L}_{VAE} = \text{Reconstruction Loss} + \cdot \text{KL Divergence}$$
+
+1. Reconstruction Loss: Measure how well the VAE can redraw the data from the latent space. A higher value indicates better reconstruction.
+2. KL Divergence: Ensure the distribution learned by the encode stay close to the **Standard Normal Distribution**.
+
+### Example: The "Color Palette."
+Imagine we are training a VAE on colors. 
+- **Without KL Divergence:** Red is at coordinate (100, 100) and Blue is at (-500, 20). There is nothing in between. If you pick (0, 0), the model has no idea what color that is.
+- **With KL Divergence:** Red is at $(0.1, 0.2)$ and Blue is at $(-0.1, -0.3)$. Because they are forced into the same small "ball" around zero, the space between them must be Purple.
