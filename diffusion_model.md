@@ -86,10 +86,11 @@ KL divergence acts as a regularization tool in VAEs, it makes sure that the lear
 By forcing the learned latent space towards a normal distribution, the model avoids overfitting and ensures that the model exactly knows where to search for noise.
 ### What Is ELBO, and Why Does It Matter?
 The Evidence Lower Bound (ELBO) is the objective function that actually balances reconstruction and regularization. The loss function for a VAE is the sum of two competing terms:
+
 $$\mathcal{L}_{VAE} = \text{Reconstruction Loss} + \cdot \text{KL Divergence}$$
 
 1. Reconstruction Loss: Measure how well the VAE can redraw the data from the latent space. A higher value indicates better reconstruction.
-2. KL Divergence: Ensure the distribution learned by the encode stay close to the **Standard Normal Distribution**.
+2. KL Divergence: Ensure the distribution learned by the encoder stays close to the **Standard Normal Distribution**.
 
 ### Example: The "Color Palette."
 Imagine we are training a VAE on colors. 
