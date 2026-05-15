@@ -72,5 +72,6 @@ Imagine we want to teach a computer to draw houses.
 **Result:** If you pick a point in the middle of the latent space, the Decoder can generate a house that has never existed but looks perfectly realistic because it understands the **"rules" of the distribution**.
 
 ### Where to use which one?
-AE: Tasks like dimensionality reduction and feature extraction.
-VAE: Tasks like image and text generation, where we need to generate new datapoints.
+**AE:** Tasks like dimensionality reduction and feature extraction.
+
+**VAE:** Tasks like image and text generation, where we need to generate new datapoints.
