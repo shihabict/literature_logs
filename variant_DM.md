@@ -15,3 +15,8 @@ The conditioning information is directly added to the data $x$ or to the diffusi
 Cross-attention is used when the condition and the output are from different modalities. For example, when we would like to use both the prompt and the BEV feature to generate a scene.
 
 ### 3. Classifier-Based CDM
+This approach uses an external classifier (like a cost function and a reinforcement learning algorithm) to guide the generation process. It makes sure that the generated trajectory is actualy obey traffic rules and physical constraints.
+
+### 4. Classifier-free-based CDM
+This method accumulates both conditional and unconditional diffusion models without training a separate classifier.
+It works by blending the output of conditional and unconditional diffusion models, which is highly useful for generating realistic scenarios. 
