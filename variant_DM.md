@@ -8,6 +8,11 @@
 ## Conditional Diffusion Model:
 Standard Diffusion models are unconditional; they only use the noisy data and the current step of the denoising process. Whereas the conditional diffusion model allows us to inject extra information,
 for example, historical traffic data, road maps, or text prompts to control what exactly to generate. Conditioning Mechanisms:
+
+<img src="images/conditiona_variants.png" width="500" height="200">
+   
+    *Figure 1: Different condition mechanisms for diffusion models*
+
 ### 1. Concatenation-based CDM
 The conditioning information is directly added to the data $x$ or to the diffusion step $t$. It is simple and highly effective for tasks like predicting future traffic flow or vehicle trajectories
 
