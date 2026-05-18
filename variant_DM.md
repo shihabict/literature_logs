@@ -32,3 +32,15 @@ It works by blending the output of conditional and unconditional diffusion model
 _Figure 1: Illustration of Latent Diffusion Models_
 LDMs use a pre-trained encoder to compress the traffic data into a smaller, lower-dimensional representation called a latent space. The process of adding and removing noise happens entirely within this compressed space, and the final result is then decoded back into standard data. By operating in this latent space, LDMs drastically reduce the computational power required, enabling much faster training and inference.
 
+## Challenges in Intelligent Transportation Systems 
+1. Absence of Quality Data
+2. Privacy Issue
+3. Lack of Rare Events
+4. Difficult to Model Complex Traffic Dynamics
+5. Weak Scalability and Generalization
+6. Lack of user-friendly interaction
+
+## Advantages of Diffusion Models 
+While traditional deep learning approaches (like RNNs or GNNs) struggle with incomplete data, and standard generative models (like GANs or VAEs) suffer from unstable training and mode collapse, diffusion models offer specific advantages that directly counter these ITS challenges.
+
+## 1. High-Fidelity Generation
