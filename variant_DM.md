@@ -44,3 +44,6 @@ LDMs use a pre-trained encoder to compress the traffic data into a smaller, lowe
 While traditional deep learning approaches (like RNNs or GNNs) struggle with incomplete data, and standard generative models (like GANs or VAEs) suffer from unstable training and mode collapse, diffusion models offer specific advantages that directly counter these ITS challenges.
 
 ## 1. High-Fidelity Generation
+Diffusion models can generate high-quality data in traffic-related tasks, and on top of that, training a diffusion model is easier and exhibits superior performance than VAEs and GANs. Additionally, by generating synthetic data, it can address the traffic data privacy concern.
+## 2. Controllable Generation
+By using a conditional diffusion model, it can generate traffic layout, environmental factors, and textual instructions aligned with a specific goal and context.
