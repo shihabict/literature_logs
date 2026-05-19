@@ -30,6 +30,7 @@ It works by blending the output of conditional and unconditional diffusion model
 <img src="images/LDM.png" width="800" height="300">
 
 _Figure 1: Illustration of Latent Diffusion Models_
+
 LDMs use a pre-trained encoder to compress the traffic data into a smaller, lower-dimensional representation called a latent space. The process of adding and removing noise happens entirely within this compressed space, and the final result is then decoded back into standard data. By operating in this latent space, LDMs drastically reduce the computational power required, enabling much faster training and inference.
 
 ## Challenges in Intelligent Transportation Systems 
