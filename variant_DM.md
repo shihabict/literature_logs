@@ -64,4 +64,8 @@
  ### **Model-Based Reinforcement Learning**: 
  The agent learns how the environment works, it actually learns the model of the environment before making a move. This model-based agent is implemented when the environment is strict and well-known. For example, an agent learns to play chess, it actually knows how the board looks, what the moves of the knight are, and it knows the exact rewards (win, loss, or draw).
  - **Algorithms**: AlphaZero, Dyna-Q
+
+**Stage 1**: Observe the environment and learn its rules.
+
+**Stage 2**: Give these rules to the separate optimizer to find out the best path or combination.
 </details>
