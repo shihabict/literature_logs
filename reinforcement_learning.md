@@ -18,3 +18,7 @@ Now we will learn about the Mathematical Vocabulary of RL.
 ## The RL Loop
 The agent observes the states of the world and makes a decision or action. The environment executes that action in the environment and evaluates this action by calculating the reward.
 Finally, the agent sends that reward and the next state ($S_{t+1}$) corresponding to the action that was made by the agent.
+
+<img src="images/rl_loop.png" width="500" height="200">
+
+*Figure 1: Reinforcement Learning Loop*
