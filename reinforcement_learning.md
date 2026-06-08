@@ -22,3 +22,6 @@ Finally, the agent sends that reward and the next state ($S_{t+1}$) correspondin
 <img src="images/rl_loop.png" width="500" height="200">
 
 *Figure 1: Reinforcement Learning Loop*
+ - **Episode**: Episode is one complete sequence of the RL loop from the initial state $S_0$ to the designated **terminal state**. Once the agent reaches the terminal state, the environment resets to the initial state and starts a new episode.
+   - For example, running a traffic simulation of the rush morning hour starts from 6 AM($S_0$) and terminates at 9 AM($S_{\tau}$).
+ - **Episode Length($T$)**: Total number of states an agent took to reach to the terminal state in a particular episode. If the traffic simulator updates every 1 second, a 3-hour rush episode has an episode length $T=10800$ steps.
