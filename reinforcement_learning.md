@@ -13,7 +13,7 @@ Now we will learn about the Mathematical Vocabulary of RL.
   - Action 0: Keep the current Green Phase on
   - Action 1: Switch to yellow/red phase.
 - **Reward($R_t$)**: This is the single scalar number returned by the Environment after executing the action. It actually evaluates how good or bad the action was in that immediate short term.
-  The ultimate goal is to maximize the total accumulation of the rewards.
+  The ultimate goal is to maximise the total accumulation of the rewards.
 
 ## The RL Loop
 The agent observes the states of the world and makes a decision or action. The environment executes that action in the environment and evaluates this action by calculating the reward.
@@ -38,3 +38,14 @@ $$a= \pi(s)$$
 2. **Stochastic Policy**: Instead of a specific action, a policy returns a probability distribution of all actions. In other words, given a state, the agent will choose an action randomly based on the probability distribution. For example, in a poker game, the agent may not always choose the same action for the same state.
 
 $$\pi(a|s) = \mathbb{P}[A_t = a | S_t = s]$$
+
+### Discount Factor $(\gamma)$
+Gamma is a number between $0$ and $1$. We multiply future rewards by $\gamma$, compounding it for every step into the future.
+The Discounted Return Equation:
+
+$$G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \dots = \sum_{k=0}^{\infty} \gamma^k R_{t+k+1}$$
+
+How $\gamma$ shapes the agent's personality:
+
+  - If $\gamma = 0$: The agent is perfectly short-sighted. It only cares about the immediate next reward ($R_{t+1}$).
+  - If $\gamma = 0.99$: The agent is deeply strategic, heavily weighting events that happen far into the future.
