@@ -39,7 +39,7 @@ $$a= \pi(s)$$
 
 $$\pi(a|s) = \mathbb{P}[A_t = a | S_t = s]$$
 
-### Discount Factor $(\gamma)$
+## Discount Factor $(\gamma)$
 Gamma is a number between $0$ and $1$. We multiply future rewards by $\gamma$, compounding it for every step into the future.
 The Discounted Return Equation:
 
@@ -49,3 +49,23 @@ How $\gamma$ shapes the agent's personality:
 
   - If $\gamma = 0$: The agent is perfectly short-sighted. It only cares about the immediate next reward ($R_{t+1}$).
   - If $\gamma = 0.99$: The agent is deeply strategic, heavily weighting events that happen far into the future.
+
+## The Value Function
+The value function tells us how good it is to be in a certain state or to take a certain action.
+
+1. **State Value Function $(V_{\pi}(s))$**: It evaluates how good it is to be a specific state.
+
+$$v_\pi(s) = \mathbb{E}_\pi [ G_t | S_t = s ]$$
+
+Where,
+- $V_{\pi}(s)$: Value to be in the state S under $\pi$
+- $\mathbb{E}_\pi$: Expected Value, assuming that the agent behaves according to policy $\pi$
+- $G_t$: Total discounted return
+- $S_t=s$: Starting from policy state s.
+
+2. **Action Value Function $(Q_{\pi}(s, a))$**: The Q-value evaluates how good it is to take a specific action $a$ in a specific state $s$, and then follow policy $\pi$ forever after.
+
+   $$q_\pi(s,a) = \mathbb{E}_\pi [ G_t | S_t = s, A_t = a ]$$
+
+## The Bellman Equation: The Mathematical Heartbeat of RL
+Bellman eaution that tells how to estimate the future rewards and how to make the optimal decisions.
