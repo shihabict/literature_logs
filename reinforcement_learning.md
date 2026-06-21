@@ -53,7 +53,7 @@ How $\gamma$ shapes the agent's personality:
 ## The Value Function
 The value function tells us how good it is to be in a certain state or to take a certain action.
 
-1. **State Value Function $(V_{\pi}(s))$**: It evaluates how good it is to be a specific state.
+1. **State Value Function $(V_{\pi}(s))$**: It evaluates how good it is to be in a specific state.
 
 $$v_\pi(s) = \mathbb{E}_\pi [ G_t | S_t = s ]$$
 
@@ -68,4 +68,16 @@ Where,
    $$q_\pi(s,a) = \mathbb{E}_\pi [ G_t | S_t = s, A_t = a ]$$
 
 ## The Bellman Equation: The Mathematical Heartbeat of RL
-Bellman eaution that tells how to estimate the future rewards and how to make the optimal decisions.
+Bellman eaution that tells how to estimate the future rewards and how to make the optimal decisions. It breaks a massive, infinite problem into a two-part recursive loop: **The Immediate Reward + The Discounted Value of the Next State** 
+
+The Bellman equation actually says, you do not need to look all the way to the end goal to know your current value. If you only know the immediate reward of your next step and the value of the place where you land.
+
+$$Value(Current) = Immediate\_{Reward} + \gamma \times Value(Next)$$
+
+### Mathematics: Bellman Expectation for $v_\pi(s)$
+---
+$$v_\pi(s) = \sum_a \pi(a|s) \sum_{s', r} p(s', r | s, a) \left[ r + \gamma v_\pi(s') \right]$$
+
+Let's read out this equation loud, 
+
+> The value of begin in this current state s is..... $\sum_a \pi(a|s)$: average of all the actions my policy might choose, multiply by the average of all possible next state ($s'$) with reward ($r$) of the immediate reward, plus the discounted value of wherever I ended up.
