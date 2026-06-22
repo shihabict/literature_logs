@@ -9,6 +9,8 @@ Each section below contains a conceptual breakdown of the mathematics, followed 
 
 * [Introduction to RL and Planning](#intro-to-reinforcement-learning-and-planning)
 * [Bellman Equations](#the-bellman-equation-the-mathematical-heartbeat-of-rl)
+* [Model-Free Reinforcement Learning](#model-free-reinforcement-learning)
+  * [Monte Carlo (MC) Methods](#monte-carlo-mc-methods-learning-at-the-end)
 <!-- * [Dynamic Programming: Model-Based RL](#)
 * [Monte Carlo Model-Free Prediction & Control](#)
 * [Temporal Difference (TD) Learning](#)
@@ -113,8 +115,8 @@ Where,
 
    $$q_\pi(s,a) = \mathbb{E}_\pi [ G_t | S_t = s, A_t = a ]$$
 
-## The Bellman Equation: The Mathematical Heartbeat of RL
-Bellman eaution that tells how to estimate the future rewards and how to make the optimal decisions. It breaks a massive, infinite problem into a two-part recursive loop: **The Immediate Reward + The Discounted Value of the Next State** 
+## The Bellman Equation: The Mathematical Heartbeat of RLThe 
+Bellman equation describes how to estimate future rewards and make optimal decisions. It breaks a massive, infinite problem into a two-part recursive loop: **The Immediate Reward + The Discounted Value of the Next State** 
 
 The Bellman equation actually says, you do not need to look all the way to the end goal to know your current value. If you only know the immediate reward of your next step and the value of the place where you land.
 
@@ -126,4 +128,27 @@ $$v_\pi(s) = \sum_a \pi(a|s) \sum_{s', r} p(s', r | s, a) \left[ r + \gamma v_\p
 
 Let's read out this equation loud, 
 
-> The value of begin in this current state s is..... $\sum_a \pi(a|s)$: average of all the actions my policy might choose, multiply by the average of all possible next state ($s'$) with reward ($r$) of the immediate reward, plus the discounted value of wherever I ended up.
+> The value of begin in this current state s is..... $\sum_a \pi(a|s)$: average of all the actions my policy might choose, multiply by the average of all possible next states ($s'$) with reward ($r$) of the immediate reward, plus the discounted value of wherever I ended up.
+
+
+## Model-Free Reinforcement Learning
+In model-free Reinforcement Learning, the agent learns from experience. The agent interacts with the world or environment and learns by making mistakes and adjusting. There are two fundamental ways to learn from experience: **Monte Carlo (MC) Methods** and **Temporal-Difference (TD) Learning**.
+
+### Monte Carlo (MC) Methods: Learning at the End
+The agent plays through an entire episode from start to finish using its current policy. Once the episode hits a terminal state, the agent looks back at the total Return ($G_t$) it actually received, and it takes an empirical average of the actual returns.
+
+To update the value of a state after an episode, we use an incremental update rule:
+
+$$V(S_t) \leftarrow V(S_t) + \alpha \left[ G_t - V(S_t) \right]$$
+
+Where,
+
+- $V(S_t)$: Our current guess for the value of the state.
+- $\alpha$ (Alpha): The Learning Rate. It determines how much we trust this new experience versus our old memory. (Usually a small number like 0.01).
+- $G_t$: The actual return we got from this state until the end of the episode.
+- $[ G_t - V(S_t) ]$: The Error. The difference between what we actually got and what we thought we were going to get.
+
+**Trade-offs**:
+- Strength: It is unbiased. The agent uses actual, observed returns ($G_t$), not guesses.
+- Weakness 1 (High Variance): A single bad random action near the end of the episode will mathematically penalize perfectly good actions taken at the beginning.
+- Weakness 2 (Episodic Only): You must wait until the end of the episode to learn anything. It cannot be used for continuous, never-ending tasks.
