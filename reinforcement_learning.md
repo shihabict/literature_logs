@@ -11,6 +11,7 @@ Each section below contains a conceptual breakdown of the mathematics, followed 
 * [Bellman Equations](#the-bellman-equation-the-mathematical-heartbeat-of-rl)
 * [Model-Free Reinforcement Learning](#model-free-reinforcement-learning)
   * [Monte Carlo (MC) Methods](#monte-carlo-mc-methods-learning-at-the-end)
+  * [Temporal-Difference (TD) Learning](#temporal-difference-td-learning-learning-every-step)
 <!-- * [Dynamic Programming: Model-Based RL](#)
 * [Monte Carlo Model-Free Prediction & Control](#)
 * [Temporal Difference (TD) Learning](#)
@@ -115,8 +116,8 @@ Where,
 
    $$q_\pi(s,a) = \mathbb{E}_\pi [ G_t | S_t = s, A_t = a ]$$
 
-## The Bellman Equation: The Mathematical Heartbeat of RLThe 
-Bellman equation describes how to estimate future rewards and make optimal decisions. It breaks a massive, infinite problem into a two-part recursive loop: **The Immediate Reward + The Discounted Value of the Next State** 
+## The Bellman Equation: The Mathematical Heartbeat of RL
+The Bellman equation describes how to estimate future rewards and make optimal decisions. It breaks a massive, infinite problem into a two-part recursive loop: **The Immediate Reward + The Discounted Value of the Next State** 
 
 The Bellman equation actually says, you do not need to look all the way to the end goal to know your current value. If you only know the immediate reward of your next step and the value of the place where you land.
 
@@ -135,6 +136,7 @@ Let's read out this equation loud,
 In model-free Reinforcement Learning, the agent learns from experience. The agent interacts with the world or environment and learns by making mistakes and adjusting. There are two fundamental ways to learn from experience: **Monte Carlo (MC) Methods** and **Temporal-Difference (TD) Learning**.
 
 ### Monte Carlo (MC) Methods: Learning at the End
+---
 The agent plays through an entire episode from start to finish using its current policy. Once the episode hits a terminal state, the agent looks back at the total Return ($G_t$) it actually received, and it takes an empirical average of the actual returns.
 
 To update the value of a state after an episode, we use an incremental update rule:
@@ -150,5 +152,21 @@ Where,
 
 **Trade-offs**:
 - Strength: It is unbiased. The agent uses actual, observed returns ($G_t$), not guesses.
-- Weakness 1 (High Variance): A single bad random action near the end of the episode will mathematically penalize perfectly good actions taken at the beginning.
+- Weakness 1 (High Variance): A single bad random action near the end of the episode will mathematically penalise perfectly good actions taken at the beginning.
 - Weakness 2 (Episodic Only): You must wait until the end of the episode to learn anything. It cannot be used for continuous, never-ending tasks.
+
+### Temporal-Difference (TD) Learning: Learning Every Step
+---
+Temporal-Difference (TD) learning allows the agent to update its value estimates continuously, step-by-step, without waiting for the episode to end. It does this using the core concept of the Bellman Equation: Bootstrapping (updating a guess based on another guess).
+
+The update rule looks almost identical to MC, but instead of using the full return ($G_t$), we use the TD Target.
+
+$$V(S_t) \leftarrow V(S_t) + \alpha \left[ R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right]$$
+
+- $R_{t+1} + \gamma V(S_{t+1})$: This is the TD Target. It is the immediate reward you just got, plus the discounted guess of the value of the next state you landed in.
+- $\left[ R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right]$: This is the TD Error. It is the fundamental signal in modern reinforcement learning. It measures the surprise between what you expected and what actually happened on that single step.
+
+**Trade-offs**:
+- Strength 1 (Real-Time Learning): The agent learns at every single time step. It does not need to wait for the end of an episode.
+- Strength 2 (Low Variance): Because it only looks one step ahead, it isn't derailed by a long chain of random events.
+- Weakness (Biased): At the beginning of training, $V(S_{t+1})$ is totally wrong. You are updating your guess based on a terrible guess, which can cause the algorithm to temporarily learn the wrong things until it eventually self-corrects.
