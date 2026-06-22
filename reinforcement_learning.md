@@ -1,3 +1,49 @@
+## Overview
+
+This document provides foundational notes, literature logs, and algorithmic implementations for Reinforcement Learning. It serves as a living knowledge base to complement theoretical materials from standard texts, alongside applied research in Intelligent Transportation Systems. 
+
+
+Each section below contains a conceptual breakdown of the mathematics, followed by practical implementations.
+
+### Table of Contents
+
+* [Introduction to RL and Planning](#intro-to-reinforcement-learning-and-planning)
+* [Bellman Equations](#the-bellman-equation-the-mathematical-heartbeat-of-rl)
+<!-- * [Dynamic Programming: Model-Based RL](#)
+* [Monte Carlo Model-Free Prediction & Control](#)
+* [Temporal Difference (TD) Learning](#)
+* [Deep Reinforcement Learning (DQN, PPO)](#)
+* [Explainable AI (XAI) in Reinforcement Learning](#)
+* [Integration of Diffusion Policy Networks in RL](#) (WIP)
+
+### List of Implemented Algorithms
+
+**Tabular Methods**
+* [Dynamic Programming: Policy Evaluation & Iteration](#)
+* [Dynamic Programming: Value Iteration](#)
+* [Monte Carlo Control with Epsilon-Greedy Policies](#)
+* [SARSA (On-Policy TD Learning)](#)
+* [Q-Learning (Off-Policy TD Learning)](#)
+
+**Deep Reinforcement Learning & Applications**
+* [Deep Q-Learning (DQN) with Prioritized Experience Replay](#)
+* [Policy Gradient: REINFORCE with Baseline](#)
+* [Minimalistic Intersection Controller (33-Dimension State Space)](#)
+* [Explainable RL for Traffic Congestion Mitigation](#) 
+* [Diffusion Policy Networks for Traffic Signal Control](#) (WIP)
+-->
+
+
+
+
+
+
+
+
+
+
+
+
 ## Intro to Reinforcement Learning and Planning
 Reinforcement Learning is all about learning by trial and error through interaction. It is a continuous and cyclic conversation between the agent and the environment.
 
