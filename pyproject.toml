@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Literature Logs"
+version = "0.1.0"
+description = "Personal Knowledge Base."
+authors = [{ name = "Shihab" }]
+requires-python = ">=3.9"
+dependencies = ["numpy", "pandas"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,16 @@
+.idea/
+*.DS_Store
+*.drawio
+*.xml
+litEnv/
+data/
+datasets/
+results/
+pipeline_logs/
+__pycache__/
+eval_results/
+*.json
+*.ali
+*.o
+*.rmeta
+*.csv
