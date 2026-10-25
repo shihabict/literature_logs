@@ -23,3 +23,7 @@ Because research is an iterative process of reading, testing, and refining, I us
 ### Research Skills
 
 - [Academic Writing Guidelines](academic_writing.md): Structural tips, formatting notes, and best practices I've compiled for drafting manuscripts, reports, and conference papers.
+
+### Multi-Agent Reinforcement Learning
+
+- [MAgent: A Many-Agent Reinforcement Learning Platform for Artificial Collective Intelligence](multi_agentRL.md):
