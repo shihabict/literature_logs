@@ -6,3 +6,9 @@ Github Link : [Github](https://github.com/geek-ai/MAgent) <br>
 Demo Video: [Youtube](https://www.youtube.com/watch?v=HCSm0kVolqI) <br>
 
 ---
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=HCSm0kVolqI">
+    <img src="https://www.youtube.com" alt="Watch the video" width="70%">
+  </a>
+</p>
