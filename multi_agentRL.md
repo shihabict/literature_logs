@@ -104,16 +104,15 @@ This process comprises of three parts: **Action Selection**, **State Transition*
 #### Action Selection
 They used $\eplison$- greedy approach to select the action. The agent selects the action that has the highest Q-value from the Q-table.
 #### State Transition
-After executing the action, the agent receives the **payoff** and transitions to a new state(strategy)
+After executing the action, the agent receives the **payoff** and transitions to a new state(strategy) <br>
 **Payoff Calculation**
-$$
-\pi_i(t) =
+<br>
+$$\pi_i(t) =
 \begin{cases}
 \displaystyle\sum_{h=1}^{k_i} \pi_i^{h} & \text{if } a_i = A \\[2ex]
-k_i \mu & \text{if } a_i = I
-\end{cases}
-\tag{7}
-$$
+k_i \mu & \text{if } a_i = I\end{cases}$$
+
+$$\pi_i^{h} = -c\,s_i + \frac{r\,c\,x_h}{x_h + y_h}$$
 
 where:
 
