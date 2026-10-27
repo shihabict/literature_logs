@@ -99,5 +99,32 @@ Nodes correspond to agents, and hyperedges correspond to connections among them.
 | **C** (cooperate) | Q<sup>i</sup><sub>C,A</sub>(t) | Q<sup>i</sup><sub>C,I</sub>(t) |
 | **D** (defect) | Q<sup>i</sup><sub>D,A</sub>(t) | Q<sup>i</sup><sub>D,I</sub>(t) |
 
+### 3. Evolutionary process
+This process comprises of three parts: **Action Selection**, **State Transition** and **Q-table updating**
+#### Action Selection
+They used $\eplison$- greedy approach to select the action. The agent selects the action that has the highest Q-value from the Q-table.
+#### State Transition
+After executing the action, the agent receives the **payoff** and transitions to a new state(strategy)
+**Payoff Calculation**
+$$
+\pi_i(t) =
+\begin{cases}
+\displaystyle\sum_{h=1}^{k_i} \pi_i^{h} & \text{if } a_i = A \\[2ex]
+k_i \mu & \text{if } a_i = I
+\end{cases}
+\tag{7}
+$$
+
+where:
+
+- $\pi_i(t)$ is the total payoff of agent $i$ at time step $t$
+- $a_i$ is the action of agent $i$: $A$ = active, $I$ = inactive
+- $k_i$ is the hyperdegree of agent $i$ (the number of hyperedges it belongs to)
+- $\pi_i^{h}$ is the payoff agent $i$ gets from the $h$-th hyperedge it belongs to
+- $\mu$ is the fixed reward for an inactive agent, received from every hyperedge it belongs to
+- $c$ is the amount a cooperator invests in the pool
+- $r$ is the multiplication factor of the pool
+- $s_i$ is the strategy of agent $i$: $s_i = 1$ for cooperation, $s_i = 0$ for defection
+- $x_h$ and $y_h$ are the numbers of active cooperators and active defectors in the $h$-th hyperedge
 
 
