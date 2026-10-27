@@ -62,5 +62,6 @@ In this survey, they addressed
 Authors: Yan Xu et al. <br>
 Venue: Elsevier - Knowledge Based Systems <br>
 GitHub: Not provided<br>
+[Paper Link](https://www.sciencedirect.com/science/article/pii/S0950705124009602)
 
 In this paper, they combined **Evolutionary Game Theory** with **RL** to investigate the influence of a dynamic environment on **Gruop Cooperation**. **Active agent** used social learning to update policy over time, whereas for **inactive agent** they introduced **varying reward*** to maintain cooperation. From their investigation, they found that **meduim sized** environment is favourable for collective cooperation.
