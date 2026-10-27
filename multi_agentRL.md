@@ -107,10 +107,10 @@ They used $\eplison$- greedy approach to select the action. The agent selects th
 After executing the action, the agent receives the **payoff** and transitions to a new state(strategy) <br>
 **Payoff Calculation**
 <br>
-$$\pi_i(t) =
-\begin{cases}
-\displaystyle\sum_{h=1}^{k_i} \pi_i^{h} & \text{if } a_i = A \\[2ex]
-k_i \mu & \text{if } a_i = I\end{cases}$$
+
+$$\pi_i(t) = \sum_{h=1}^{k_i} \pi_i^{h} \quad \text{if } a_i = A$$
+
+$$\pi_i(t) = k_i \mu \quad \text{if } a_i = I$$
 
 $$\pi_i^{h} = -c\,s_i + \frac{r\,c\,x_h}{x_h + y_h}$$
 
