@@ -64,7 +64,7 @@ Venue: Elsevier --- Knowledge-Based Systems <br>
 GitHub: Not provided<br>
 [Paper Link](https://www.sciencedirect.com/science/article/pii/S0950705124009602)
 
-In this paper, they combined **Evolutionary Game Theory** with **RL** to investigate the influence of a dynamic environment on **Gruop Cooperation**. **Active agent** used social learning to update policy over time, whereas for **inactive agent** they introduced **varying reward*** to maintain cooperation. From their investigation, they found that **meduim sized** environment is favourable for collective cooperation.
+In this paper, they combined **Evolutionary Game Theory** with **RL** to investigate the influence of a dynamic environment on **Group Cooperation**. **Active agent** used social learning to update policy over time, whereas for **inactive agent** they introduced **varying reward*** to maintain cooperation. From their investigation, they found that **meduim sized** environment is favourable for collective cooperation.
 
 ### What is Evolutionary Game Theory?
 Evolutionary Game Theory **(EGT)**, studies the games played by not a few rational, calculated player, but a large populations whose strategies spread  or die out over time based on their performance. 
@@ -73,3 +73,16 @@ Evolutionary Game Theory **(EGT)**, studies the games played by not a few ration
 
 ### What is the Public Goods Game?
 It is a **group game**, where each player decides how to contribute to a **shared pot**. After that, the pot is multiplied by a factor of $r$ (where $1 < r < N$) and split **equally** among all players. The condition of the multiplier factor is the **dilemma**: if you contribute and others do not, your return will be $\frac{\text{your contribution} \times r}{N}$, which will be less than your actual contribution.
+
+## Proposed Model
+Their framework consists of three integral parts, **Higher-order network constuction**, **Initialization**, and **evolutionary process**.
+### Higher-order Network Construction
+To generate the hypergraph,
+- **Initialize**: Start with $g$ nodes.
+- **Hyperedge growth**: Added $m \in[1,g)$ new nodes and combine them with $(g-m)$ exisiting nodes.
+- **Preferential Attachment**: Probability of selection node $i$ is proportional to  its hyperdegree $d_H(i)$
+  $$\muld_H(i) = \frac{d_H(i)}{\sum_{j\inN}d_H(j)}$$
+- Repeat steps 2 and 3 until an N-node hypergraph is generated.
+![Hypergraph Creation](images/hypergraph_creation.png)
+---
+
