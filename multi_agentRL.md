@@ -75,13 +75,13 @@ Evolutionary Game Theory **(EGT)**, studies the games played by not a few ration
 It is a **group game**, where each player decides how to contribute to a **shared pot**. After that, the pot is multiplied by a factor of $r$ (where $1 < r < N$) and split **equally** among all players. The condition of the multiplier factor is the **dilemma**: if you contribute and others do not, your return will be $\frac{\text{your contribution} \times r}{N}$, which will be less than your actual contribution.
 
 ## Proposed Model
-Their framework consists of three integral parts, **Higher-order network constuction**, **Initialization**, and **evolutionary process**.
+Their framework consists of three integral parts: **Higher-order network constuction**, **Initialization**, and **evolutionary process**.
 ### Higher-order Network Construction
 To generate the hypergraph,
-- **Initialize**: Start with $g$ nodes.
+- **Initialize**: Start with $g$ nodes; every hyperedge should have g nodes.
 - **Hyperedge growth**: Added $m \in[1,g)$ new nodes and combine them with $(g-m)$ exisiting nodes.
 - **Preferential Attachment**: Probability of selection node $i$ is proportional to  its hyperdegree $d_H(i)$
-  $$\muld_H(i) = \frac{d_H(i)}{\sum_{j\inN}d_H(j)}$$
+  $$\muld_H(i) = \frac{d_H(i)}{\sum_{j\inN}d_H(j)}$$. A node in many groups is more likely to be picked again.
 - Repeat steps 2 and 3 until an N-node hypergraph is generated.
 ![Hypergraph Creation](images/hypergraph_creation.png)
 ---
