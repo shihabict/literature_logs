@@ -75,8 +75,8 @@ Evolutionary Game Theory **(EGT)**, studies the games played by not a few ration
 It is a **group game**, where each player decides how to contribute to a **shared pot**. After that, the pot is multiplied by a factor of $r$ (where $1 < r < N$) and split **equally** among all players. The condition of the multiplier factor is the **dilemma**: if you contribute and others do not, your return will be $\frac{\text{your contribution} \times r}{N}$, which will be less than your actual contribution.
 
 ## Proposed Model
-Their framework consists of three integral parts: **Higher-order network constuction**, **Initialization**, and **evolutionary process**.
-### Higher-order Network Construction
+Their framework consists of three integral parts: **Higher-order network constuction**, **Initialization**, and **Evolutionary process**.
+### 1. Higher-order Network Construction
 To generate the hypergraph,
 - **Initialize**: Start with $g$ nodes; every hyperedge should have g nodes.
 - **Hyperedge growth**: Added $m \in[1,g)$ new nodes and combine them with $(g-m)$ exisiting nodes.
@@ -85,4 +85,19 @@ To generate the hypergraph,
 - Repeat steps 2 and 3 until an N-node hypergraph is generated.
 ![Hypergraph Creation](images/hypergraph_creation.png)
 ---
+### 2. Initialization
+Nodes correspond to agents, and hyperedges correspond to connections among them. 
+- Strategy (row) $S = \{C,D\}$, C means **Cooperation** and D means **Defection**(do noting).
+- Actions (columns) $A = \{A,I\}$, A means **Active** (Stay in the game) and I means **Inactive** (Leave the game)
+- Each agent has its own Q-table
+- All entries are initialized to $0$
+
+**Q-table of agent *i* at time *t* (Eq. 6)**
+
+| State \ Action | A (active) | I (inactive) |
+|---|---|---|
+| **C** (cooperate) | Q<sup>i</sup><sub>C,A</sub>(t) | Q<sup>i</sup><sub>C,I</sub>(t) |
+| **D** (defect) | Q<sup>i</sup><sub>D,A</sub>(t) | Q<sup>i</sup><sub>D,I</sub>(t) |
+
+
 
