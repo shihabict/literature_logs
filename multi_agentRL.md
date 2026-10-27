@@ -57,11 +57,19 @@ In this survey, they addressed
   - **Multi-goal learning**. where each agent optimizes its own goal instead of joint action or reward.
   - **Multi-task Learning**, agent not only performs one task, but also other related tasks.
   - **Safe MADRL**
- 
+--- 
 # Reinforcement learning and Collective Cooperation on higher-order networks
 Authors: Yan Xu et al. <br>
-Venue: Elsevier - Knowledge Based Systems <br>
+Venue: Elsevier --- Knowledge-Based Systems <br>
 GitHub: Not provided<br>
 [Paper Link](https://www.sciencedirect.com/science/article/pii/S0950705124009602)
 
 In this paper, they combined **Evolutionary Game Theory** with **RL** to investigate the influence of a dynamic environment on **Gruop Cooperation**. **Active agent** used social learning to update policy over time, whereas for **inactive agent** they introduced **varying reward*** to maintain cooperation. From their investigation, they found that **meduim sized** environment is favourable for collective cooperation.
+
+### What is Evolutionary Game Theory?
+Evolutionary Game Theory **(EGT)**, studies the games played by not a few rational, calculated player, but a large populations whose strategies spread  or die out over time based on their performance. 
+
+**EGT ASK:** _If large numbers of individuals with different strategies keep meeting each other, which strategies will take over the population?_
+
+### What is the Public Goods Game?
+It is a **group game**, where each player decides how to contribute to a **shared pot**. After that, the pot is multiplied by a factor of $r$ (where $1 < r < N$) and split **equally** among all players. The condition of the multiplier factor is the **dilemma**: if you contribute and others do not, your return will be $\frac{\text{your contribution} \times r}{N}$, which will be less than your actual contribution.
