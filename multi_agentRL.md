@@ -18,7 +18,7 @@ Demo Video: [Youtube](https://www.youtube.com/watch?v=HCSm0kVolqI) <br>
  - They proposed a highly scalable **Many Agent** platform that can host millions of agents on a GPU server.
  - MAgent provides environment, agent configurations, and a reward description language to enable flexible environment design.
  - Illustrate three running examples of **Many Agent** simulation of pursuitting, gathering, and battlefield agents.
- - Implemented three parameter sharing DQN, DRQN, A2C and found DQN perform best in their setting.
+ - Implemented three parameter-sharing DQN, DRQN, and A2C and found DQN performed best in their setting.
 
  ### Limitations
  - Not enough technical details about the environment, agent communications, reward design, states, and actions.
@@ -38,7 +38,7 @@ GitHub: <br>
 In this survey, they addressed
 - Training Schemes of MARL
   - Centralized Training, Centralized Execution (CTCE)
-  - Centralized Training Decentralized Execution (CTDE)
+  - Centralized Training, Decentralized Execution (CTDE)
   - Distributed training, decentralized execution (DTDE)
 - Agent Behaviour Patterns
   - Cooperative
@@ -48,4 +48,12 @@ In this survey, they addressed
   - Non-stationarity
   - Shadowed Equilibrium
   - Partially Observable Markov Games
-  - Credit Assignment Problem  
+  - Credit Assignment Problem
+ 
+- Messaging between Agents
+  - Broadcasting Communication, where an agent broadcasts information to all participants in the channel.
+  - Networked Communication, where agents exchange information with their neighbourhood.
+- Future Direction
+  - **Multi-goal learning**. where each agent optimizes its own goal instead of joint action or reward.
+  - **Multi-task Learning**, agent not only performs one task, but also other related tasks.
+  - **Safe MADRL**
