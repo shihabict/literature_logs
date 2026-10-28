@@ -105,7 +105,9 @@ This process comprises of three parts: **Action Selection**, **State Transition*
 They used $\eplison$- greedy approach to select the action. The agent selects the action that has the highest Q-value from the Q-table.
 #### State Transition
 After executing the action, the agent receives the **payoff** and transitions to a new state(strategy) <br>
+
 **Payoff Calculation**
+---
 <br>
 
 $$\pi_i(t) = \sum_{h=1}^{k_i} \pi_i^{h} \quad \text{if } a_i = A$$
@@ -125,5 +127,20 @@ where:
 - $r$ is the multiplication factor of the pool
 - $s_i$ is the strategy of agent $i$: $s_i = 1$ for cooperation, $s_i = 0$ for defection
 - $x_h$ and $y_h$ are the numbers of active cooperators and active defectors in the $h$-th hyperedge
+
+**Strategy Updating** <br>
+---
+Agent $i$ **randomly** selects an agent $j$, the likelyhood of selecting the **strategy** of agent $j$ is <br>
+
+$$\varphi\big(s_i(t+1) \leftarrow s_j(t)\big) = \frac{1}{1 + e^{-\left(r_j(t) - r_i(t)\right)/K}}$$
+
+**Limit $K \to 0$  select optimal strategy deterministically**
+
+
+Agent $i$ always copies $j$ if $j$ earns more, and never copies $j$ if $j$ earns less.
+
+**Limit $K \to \infty$ selects randomly:**
+![Proposed Architecture](images/collective_dynamics_architecture.png)
+
 
 
