@@ -142,5 +142,11 @@ Agent $i$ always copies $j$ if $j$ earns more, and never copies $j$ if $j$ earns
 **Limit $K \to \infty$ selects randomly:**
 ![Proposed Architecture](images/collective_dynamics_architecture.png)
 
+## Results
+![cooperation tradeoff](images/collective_AC_AD.png)
 
+AC = Active and Cooperative | AD = Active but Defactor | IC = Inactive and Cooperative | ID = Inactive and Defactor <br>
 
+**Left Panel:** When $\mu$ is negative, **leaving games** gives low payoff, **Playing is better**. So the agent stays in the game, but most of them are **defactors**, they do not cooperate. <br>
+**Middle Panel:** $\mu$ is higher, so Ac and AD decrease. **AC gets more payoff when it is around AC**, **AD becomes ID**. <br>
+**Right Panel:** The reward is so high that almost every agent earns more by leaving.
