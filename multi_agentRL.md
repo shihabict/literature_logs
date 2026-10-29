@@ -143,10 +143,21 @@ Agent $i$ always copies $j$ if $j$ earns more, and never copies $j$ if $j$ earns
 ![Proposed Architecture](images/collective_dynamics_architecture.png)
 
 ## Results
+### Varying Reward Effect
 ![cooperation tradeoff](images/collective_AC_AD.png)
 
 AC = Active and Cooperative | AD = Active but Defactor | IC = Inactive and Cooperative | ID = Inactive and Defactor <br>
 
-**Left Panel:** When $\mu$ is negative, **leaving games** gives low payoff, **Playing is better**. So the agent stays in the game, but most of them are **defactors**, they do not cooperate. <br>
-**Middle Panel:** $\mu$ is higher, so Ac and AD decrease. **AC gets more payoff when it is around AC**, **AD becomes ID**. <br>
-**Right Panel:** The reward is so high that almost every agent earns more by leaving.
+- **Left Panel:** When $\mu$ is negative, **leaving games** gives low payoff, **Playing is better**. So the agent stays in the game, but most of them are **defactors**, they do not cooperate. <br>
+- **Middle Panel:** $\mu$ is higher, so AC and AD decrease. **AC gets more payoff when it is around AC**, **AD becomes ID**. <br>
+- **Right Panel:** The reward is so high that almost every agent earns more by leaving.
+
+### Agent Group Size Effect
+![Group Size](images/collective_dyn_groupSize.png)
+
+$g$ uniform hyperedge, $g$ is the number of agents in each hyperedge.<br>
+- They observed the **highest proportion of AC** when g is $4 to 6$.
+
+---
+## Future Directions
+- Incorporation of **Global Environment Effect** on the proportion of the agents.
