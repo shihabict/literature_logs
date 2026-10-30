@@ -15,10 +15,10 @@ Demo Video: [Youtube](https://www.youtube.com/watch?v=HCSm0kVolqI) <br>
 
 
 ### Contribution
- - They proposed a highly scalable **Many Agent** platform that can host millions of agents on a GPU server.
+ - They proposed a highly scalable **Many Agent** platform that can host **millions of agents on a GPU server**.
  - MAgent provides environment, agent configurations, and a reward description language to enable flexible environment design.
- - Illustrate three running examples of **Many Agent** simulation of pursuitting, gathering, and battlefield agents.
- - Implemented three parameter-sharing DQN, DRQN, and A2C and found DQN performed best in their setting.
+ - Illustrate three running examples of **Many Agent** simulation of Predator, gathering, and battlefield agents.
+ - Implemented three parameter-sharing DQN, DRQN, and A2C and **found DQN** performed best in their setting.
 
  ### Limitations
  - Not enough technical details about the environment, agent communications, reward design, states, and actions.
