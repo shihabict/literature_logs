@@ -159,5 +159,10 @@ $g$ uniform hyperedge, $g$ is the number of agents in each hyperedge.<br>
 - They observed the **highest proportion of AC** when g is $4 to 6$.
 
 ---
+## Key Takeaways
+- **Moderate rewards for leaving help cooperate the most**
+- **Higher Learning Rate and lower discount factor give more cooperation**
+- **Medium groups give you the best cooperation in the environment**
+---
 ## Future Directions
 - Incorporation of **Global Environment Effect** on the proportion of the agents.
